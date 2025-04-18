@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4 text-primary fw-bold">Our Services</h2>
+  <p class="text-center mb-5 text-muted">Explore a range of professional design services tailored to bring your brand to life.</p>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Service Card 1 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/logo-design.jpg') }}" class="card-img-top" alt="Logo Design">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title mb-2 text-dark container text-center">Logo Design</h6>
+          <p class="card-text small text-muted container text-center">Unique and professional brand identities tailored to your vision.</p>
+          <div class="mt-auto text-center">
+            <a href="/contact" class="btn btn-sm btn-primary">Get This Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Card 2 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/poster-flyer.jpg') }}" class="card-img-top" alt="Poster Design">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title mb-2 text-dark container text-center">Poster & Flyer Design</h6>
+          <p class="card-text small text-muted container text-center">Visually appealing marketing materials for events and promotions.</p>
+          <div class="mt-auto text-center">
+            <a href="/contact" class="btn btn-sm btn-primary">Get This Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Card 3 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/business-card.jpg') }}" class="card-img-top" alt="Business Card Design">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title mb-2 text-dark container text-center">Business Cards</h6>
+          <p class="card-text small text-muted container text-center">Stylish and professional designs to help you network with confidence.</p>
+          <div class="mt-auto text-center">
+            <a href="/contact" class="btn btn-sm btn-primary">Get This Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Card 4 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/web-design.jpg') }}" class="card-img-top" alt="Web Design">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title mb-2 text-dark container text-center container text-center ">Web Design</h6>
+          <p class="card-text small text-muted container text-center">Modern, responsive, and user-friendly websites built to convert.</p>
+          <div class="mt-auto text-center">
+            <a href="/contact" class="btn btn-sm btn-primary">Get This Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Card 5 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/social-media.jpg') }}" class="card-img-top" alt="Social Media Graphics">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title mb-2 text-dark container text-center">Social Media Graphics</h6>
+          <p class="card-text small text-muted container text-center">Eye-catching designs that boost your engagement and reach online.</p>
+          <div class="mt-auto text-center">
+            <a href="/contact" class="btn btn-sm btn-primary">Get This Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Card 6 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/packaging.jpg') }}" class="card-img-top" alt="Brand Identity">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title mb-2 text-dark container text-center">Brand Identity & Packaging</h6>
+          <p class="card-text small text-muted container text-center">Consistent branding solutions across all your materials and packaging.</p>
+          <div class="mt-auto text-center">
+            <a href="/contact" class="btn btn-sm btn-primary">Get This Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

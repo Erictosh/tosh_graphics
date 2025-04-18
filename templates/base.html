@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Tosh Graphics{% endblock %}</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <div class="container">
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold" href="{{ url_for('home') }}">Tosh Graphics</a>
+  
+      <!-- Toggler (for mobile view) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- Aligns links to the right -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+    <!-- Page Content -->
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+<footer class="bg-dark text-white mt-5 pt-4 pb-3">
+  <div class="container text-center text-md-start">
+    <div class="row">
+
+      <!-- About -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">Tosh Graphics</h5>
+        <p>"Bringing Creativity to Life" – We create stunning visuals to elevate your brand identity.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ url_for('home') }}" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="{{ url_for('services') }}" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="{{ url_for('about') }}" class="text-white text-decoration-none">About</a></li>
+          <li><a href="{{ url_for('contact') }}" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">Contact Us</h5>
+        <p>Email: <a href="mailto:toshgraphiics@gmail.com" class="text-white">toshgraphiics@gmail.com</a></p>
+        <p>Phone: 0792174478</p>
+        <p>Follow us:</p>
+        <a href="https://web.facebook.com/profile.php?id=61553149425122" target="_blank" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com" target="_blank" class="text-white me-3 fs-5"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center pt-3 border-top border-light">
+      <p class="mb-0">© 2025 Tosh Graphics. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  
+    
+</body>
+</html>

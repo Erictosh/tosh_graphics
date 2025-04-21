@@ -3,29 +3,36 @@
 {% block title %}Home | Tosh Graphics{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<div class="bg-light p-5 rounded-lg text-center shadow-sm">
-    <h1 class="display-4">Tosh Graphics</h1>
-    <p class="lead">"Bringing Creativity to Life"</p>
-    <p class="mb-4">From logos to websites, we help bring your brand’s vision to life with stunning visuals and creative designs.</p>
-    <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg">Explore Our Services</a>
-</div>
+<!-- Wrapper to ensure no extra space on mobile -->
+<div class="d-flex flex-column min-vh-100">
 
-<!-- Welcome and Mission Section -->
-<div class="container mt-5">
-    <div class="text-center">
-        <h2 class="mb-3">Welcome to Tosh Graphics</h2>
-        <p class="mx-auto" style="max-width: 800px;">
-            We specialize in high-quality graphic design services, turning ideas into visually stunning designs.
-            From logos and flyers to business cards and web design, we create eye-catching, professional,
-            and brand-focused visuals that leave a lasting impression.
+    <!-- Hero Section -->
+    <div class="bg-light p-4 p-md-5 text-center shadow-sm">
+        <h1 class="display-4">Tosh Graphics</h1>
+        <p class="lead">"Bringing Creativity to Life"</p>
+        <p class="mb-4">
+            From logos to websites, we help bring your brand’s vision to life with stunning visuals and creative designs.
         </p>
-
-        <h3 class="mt-5">Our Mission</h3>
-        <p class="fst-italic mx-auto" style="max-width: 700px;">
-            Our mission at Tosh Graphics is to empower businesses, brands, and individuals with powerful
-            visual storytelling through innovative and custom graphic design solutions.
-        </p>
+        <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg">Explore Our Services</a>
     </div>
+
+    <!-- Welcome and Mission Section -->
+    <div class="container my-5 flex-grow-1">
+        <div class="text-center">
+            <h2 class="mb-3">Welcome to Tosh Graphics</h2>
+            <p class="mx-auto" style="max-width: 800px;">
+                We specialize in high-quality graphic design services, turning ideas into visually stunning designs.
+                From logos and flyers to business cards and web design, we create eye-catching, professional,
+                and brand-focused visuals that leave a lasting impression.
+            </p>
+
+            <h3 class="mt-5">Our Mission</h3>
+            <p class="fst-italic mx-auto" style="max-width: 700px;">
+                Our mission at Tosh Graphics is to empower businesses, brands, and individuals with powerful
+                visual storytelling through innovative and custom graphic design solutions.
+            </p>
+        </div>
+    </div>
+
 </div>
 {% endblock %}

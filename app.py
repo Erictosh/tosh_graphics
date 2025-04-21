@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect,flash
+from flask import Flask, render_template, request, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 import smtplib
 from email.message import EmailMessage
@@ -6,7 +6,6 @@ import os
 
 EMAIL_ADDRESS = "toshgraphiics@gmail.com"  # replace with your Gmail
 EMAIL_PASSWORD = "gxgr ukzv chsi yevh"   # replace with Gmail app password
-
 
 app = Flask(__name__)  # This creates the Flask app
 app.secret_key = 'my_secret_key'  # you can use any random string here
@@ -26,7 +25,7 @@ class Message(db.Model):
         return f'<Message {self.name}>'
 
 # Routes
-@app.route('/')
+@app.route('/', methods=['GET', 'HEAD'])
 def home():
     return render_template('home.html')
 
@@ -69,7 +68,6 @@ def contact():
         return redirect('/contact')
     
     return render_template('contact.html')
-
 
 # Run the app + create DB
 if __name__ == '__main__':

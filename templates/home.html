@@ -56,8 +56,16 @@
                     <p>Flyers, posters, and business cards tailored for maximum impact.</p>
                 </div>
             </div>
+            
+            <!-- Call to Action Button -->
+            <div class="mt-4">
+                <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-lg px-4">
+                    Explore All Our Services
+                </a>
+            </div>
         </div>
     </div>
+    
 
     <!-- Why Choose Us Section -->
     <div class="bg-light py-4 py-md-5">
@@ -83,22 +91,9 @@
         </div>
     </div>
 
-  <!-- Testimonials Preview Section -->
-<div class="container py-5">
-    <div class="text-center">
-        <h2 class="mb-4 fw-bold text-primary">What Our Clients Say</h2>
-        <figure class="text-center">
-            <blockquote class="blockquote">
-                <p class="fs-5 fst-italic mb-3">
-                    “Tosh Graphics transformed our brand completely. Professional, timely, and extremely creative!”
-                </p>
-            </blockquote>
-            <figcaption class="blockquote-footer mb-0">
-                Happy Client
-            </figcaption>
-        </figure>
-    </div>
-</div>
+ 
+    <!-- Testimonials Preview Section -->
+{% include 'testimonial.html' %}
 
 
 </div>

@@ -1,116 +1,52 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container min-vh-100 py-3 py-md-5">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-10 col-lg-8 text-center">
-      <h2 class="mb-3 mb-md-4 text-primary fw-bold">Our Services</h2>
-      <p class="mb-4 mb-md-5 text-muted">Explore a range of professional design services tailored to bring your brand to life.</p>
-    </div>
+<div class="container py-5">
+  <!-- Page Heading -->
+  <div class="text-center mb-5">
+    <h1 class="fw-bold text-primary">Our Design Services</h1>
+    <p class="text-muted fs-5">Creative, tailored solutions to elevate your brand and grow your business.</p>
   </div>
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-    <!-- Service Card 1 - Highlighted -->
-    <div class="col">
-      <div class="card h-100 shadow border border-primary position-relative service-card">
-        <span class="position-absolute top-0 start-0 badge bg-primary m-2">Popular</span>
-        <img src="{{ url_for('static', filename='images/logo-design.jpg') }}" class="card-img-top img-fluid" alt="Professional logo design mockup">
-        <div class="card-body d-flex flex-column p-3 p-md-4">
-          <h6 class="card-title mb-2 text-dark text-center">Logo Design</h6>
-          <p class="card-text small text-muted text-center mb-3">Unique and professional brand identities tailored to your vision.</p>
-          <div class="mt-auto text-center">
-            <a href="/contact" class="btn btn-sm btn-primary px-3">Get This Service</a>
-          </div>
+  <!-- Services Grid -->
+  <div class="row g-4">
+    {% for service in [
+      {"title": "Logo Design", "desc": "Custom logos crafted to reflect your brand’s uniqueness.", "img": "logo-design.jpg"},
+      {"title": "Web Design", "desc": "Responsive, conversion-focused websites for your brand.", "img": "web-design.jpg"},
+      {"title": "Poster & Flyer Design", "desc": "High-impact event posters and flyers that command attention.", "img": "poster-flyer.jpg"},
+      {"title": "Business Cards", "desc": "Stylish business cards to leave a lasting impression.", "img": "business-card.jpg"},
+      {"title": "Social Media Graphics", "desc": "Visual content optimized for online engagement.", "img": "social-media.jpg"},
+      {"title": "Packaging & Branding", "desc": "Complete identity systems and branded packaging.", "img": "packaging.jpg"}
+    ] %}
+    <div class="col-sm-6 col-lg-4">
+      <div class="card h-100 shadow-sm service-card">
+        <img src="{{ url_for('static', filename='images/' + service.img) }}" class="card-img-top img-fluid" alt="{{ service.title }}">
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title text-primary">{{ service.title }}</h5>
+          <p class="card-text text-muted mb-4">{{ service.desc }}</p>
+          <a href="/contact" class="btn btn-outline-primary mt-auto">Get Started</a>
         </div>
       </div>
     </div>
-
-    <!-- Service Card 2 -->
-    <div class="col">
-      <div class="card h-100 shadow service-card">
-        <img src="{{ url_for('static', filename='images/poster-flyer.jpg') }}" class="card-img-top img-fluid" alt="Colorful event poster design">
-        <div class="card-body d-flex flex-column p-3 p-md-4">
-          <h6 class="card-title mb-2 text-dark text-center">Poster & Flyer Design</h6>
-          <p class="card-text small text-muted text-center mb-3">Visually appealing marketing materials for events and promotions.</p>
-          <div class="mt-auto text-center">
-            <a href="/contact" class="btn btn-sm btn-primary px-3">Get This Service</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Service Card 3 -->
-    <div class="col">
-      <div class="card h-100 shadow service-card">
-        <img src="{{ url_for('static', filename='images/business-card.jpg') }}" class="card-img-top img-fluid" alt="Elegant business card layout">
-        <div class="card-body d-flex flex-column p-3 p-md-4">
-          <h6 class="card-title mb-2 text-dark text-center">Business Cards</h6>
-          <p class="card-text small text-muted text-center mb-3">Stylish and professional designs to help you network with confidence.</p>
-          <div class="mt-auto text-center">
-            <a href="/contact" class="btn btn-sm btn-primary px-3">Get This Service</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Service Card 4 -->
-    <div class="col">
-      <div class="card h-100 shadow service-card">
-        <img src="{{ url_for('static', filename='images/web-design.jpg') }}" class="card-img-top img-fluid" alt="Responsive website design preview">
-        <div class="card-body d-flex flex-column p-3 p-md-4">
-          <h6 class="card-title mb-2 text-dark text-center">Web Design</h6>
-          <p class="card-text small text-muted text-center mb-3">Modern, responsive, and user-friendly websites built to convert.</p>
-          <div class="mt-auto text-center">
-            <a href="/contact" class="btn btn-sm btn-primary px-3">Get This Service</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Service Card 5 -->
-    <div class="col">
-      <div class="card h-100 shadow service-card">
-        <img src="{{ url_for('static', filename='images/social-media.jpg') }}" class="card-img-top img-fluid" alt="Social media graphics for engagement">
-        <div class="card-body d-flex flex-column p-3 p-md-4">
-          <h6 class="card-title mb-2 text-dark text-center">Social Media Graphics</h6>
-          <p class="card-text small text-muted text-center mb-3">Eye-catching designs that boost your engagement and reach online.</p>
-          <div class="mt-auto text-center">
-            <a href="/contact" class="btn btn-sm btn-primary px-3">Get This Service</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Service Card 6 -->
-    <div class="col">
-      <div class="card h-100 shadow service-card">
-        <img src="{{ url_for('static', filename='images/packaging.jpg') }}" class="card-img-top img-fluid" alt="Branded packaging mockup">
-        <div class="card-body d-flex flex-column p-3 p-md-4">
-          <h6 class="card-title mb-2 text-dark text-center">Brand Identity & Packaging</h6>
-          <p class="card-text small text-muted text-center mb-3">Consistent branding solutions across all your materials and packaging.</p>
-          <div class="mt-auto text-center">
-            <a href="/contact" class="btn btn-sm btn-primary px-3">Get This Service</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 
   <!-- CTA Section -->
   <div class="text-center mt-5">
-    <h5 class="mb-3 text-secondary">Not sure where to start?</h5>
-    <a href="/contact" class="btn btn-outline-primary btn-lg">Talk to a Design Expert</a>
+    <h4 class="text-dark">Need a Custom Design Package?</h4>
+    <p class="text-muted mb-3">Talk to our design experts to find a solution that fits your vision.</p>
+    <a href="/contact" class="btn btn-primary btn-lg px-4">Schedule a Free Consultation</a>
   </div>
 </div>
 
-<!-- Hover Effect Styling -->
+<!-- Additional Styling -->
 <style>
   .service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease-in-out;
   }
 
   .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
   }
 </style>

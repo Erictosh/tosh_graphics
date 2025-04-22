@@ -1,60 +1,75 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="container py-5">
-    <div class="row text-center">
-      <div class="col-12">
-        <h2 class="display-4 text-primary">About Us</h2>
-        <p class="lead text-muted">At Tosh Graphics, we transform ideas into powerful visual narratives. Learn more about who we are and what we do.</p>
-      </div>
-    </div>
-    
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-6">
-        <h3 class="text-primary">Our Story</h3>
-        <p>
-          Founded with the vision of delivering innovative and high-quality design solutions, Tosh Graphics was born out of a passion for creativity and problem-solving. Over the years, we’ve helped brands and businesses stand out with designs that not only look great but also communicate their message effectively.
-        </p>
-      </div>
-      <div class="col-md-6">
-        <h3 class="text-primary">What We Do</h3>
-        <p>
-          We specialize in providing custom graphic design solutions across various mediums. Whether it's creating a brand identity, crafting marketing materials, or designing user-friendly websites, our goal is always to deliver designs that make an impact.
-        </p>
-      </div>
+<div class="container py-5">
+  <!-- About Us Heading + Icon Grid -->
+  <div class="row text-center mb-5">
+    <div class="col-12">
+      <h2 class="display-4 text-primary">About Us</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">
+        At Tosh Graphics, we turn ideas into impactful visual stories. Learn about our journey, what we do, and how we work.
+      </p>
     </div>
 
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-12">
-        <h3 class="text-primary">Our Approach</h3>
-        <p>
-          At Tosh Graphics, we believe that every design project is unique and should reflect the essence of the brand it represents. We start by understanding our clients' vision and objectives. From there, our creative team develops tailored solutions that combine aesthetics, functionality, and user experience.
-        </p>
-      </div>
+    <!-- Icon Grid: Story / Do / Approach -->
+    <div class="col-sm-6 col-md-4 mb-4">
+      <i class="bi bi-book-fill text-primary fs-1 mb-2"></i>
+      <h5 class="fw-bold">Our Story</h5>
+      <p class="text-muted">
+        Founded on a passion for creativity, we’ve helped brands stand out with designs that look great and communicate clearly.
+      </p>
     </div>
-
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-12 text-center">
-        <h3 class="text-primary">Why Choose Us?</h3>
-        <p class="lead">
-          Here’s why Tosh Graphics is the best choice for your business:
-        </p>
-        <ul class="list-unstyled">
-          <li><strong>Experience:</strong> Years of experience delivering high-quality, professional design solutions.</li>
-          <li><strong>Custom Solutions:</strong> Every design is unique, tailored specifically to your business and brand.</li>
-          <li><strong>Attention to Detail:</strong> We prioritize every element of your design, ensuring perfection in every project.</li>
-          <li><strong>Timely Delivery:</strong> We understand the importance of deadlines and deliver designs on time, every time.</li>
-          <li><strong>Customer Focused:</strong> We work closely with you to ensure that your vision comes to life just the way you imagined it.</li>
-        </ul>
-      </div>
+    <div class="col-sm-6 col-md-4 mb-4">
+      <i class="bi bi-brush-fill text-primary fs-1 mb-2"></i>
+      <h5 class="fw-bold">What We Do</h5>
+      <p class="text-muted">
+        From logos and branding to marketing materials and web design, our custom solutions make your vision come alive.
+      </p>
     </div>
-
-    <div class="row justify-content-center mt-5">
-      <div class="col-md-12 text-center">
-        <h3 class="text-primary">Let’s Bring Your Ideas to Life</h3>
-        <p class="lead">Get in touch with us today and let’s start working on your next big project!</p>
-        <a href="/contact" class="btn btn-primary btn-lg">Contact Us</a>
-      </div>
+    <div class="col-sm-6 col-md-4 mb-4">
+      <i class="bi bi-gear-fill text-primary fs-1 mb-2"></i>
+      <h5 class="fw-bold">Our Approach</h5>
+      <p class="text-muted">
+        We listen, plan, and execute—combining aesthetics and functionality to deliver designs that drive real results.
+      </p>
     </div>
   </div>
+
+  <!-- Our Mission -->
+  <div class="row justify-content-center text-center mb-5">
+    <div class="col-md-8">
+      <h3 class="text-primary">Our Mission</h3>
+      <p class="fst-italic text-muted mx-auto" style="max-width: 700px;">
+        To empower businesses, brands, and individuals with powerful visual storytelling through innovative and custom graphic design solutions.
+      </p>
+    </div>
+  </div>
+
+  <!-- Why Choose Us -->
+  <div class="row justify-content-center text-center">
+    <div class="col-12 mb-4">
+      <h3 class="text-primary">Why Choose Us?</h3>
+    </div>
+    <div class="col-sm-6 col-md-3 mb-4">
+      <i class="bi bi-briefcase-fill text-primary fs-1 mb-2"></i>
+      <h5 class="fw-bold">Expertise</h5>
+      <p class="text-muted">Years of professional experience delivering top‑tier design solutions.</p>
+    </div>
+    <div class="col-sm-6 col-md-3 mb-4">
+      <i class="bi bi-palette-fill text-primary fs-1 mb-2"></i>
+      <h5 class="fw-bold">Tailored Designs</h5>
+      <p class="text-muted">Every project is uniquely crafted to reflect your brand’s personality.</p>
+    </div>
+    <div class="col-sm-6 col-md-3 mb-4">
+      <i class="bi bi-shield-fill-check text-primary fs-1 mb-2"></i>
+      <h5 class="fw-bold">Quality & Detail</h5>
+      <p class="text-muted">We obsess over every detail, ensuring flawless execution.</p>
+    </div>
+    <div class="col-sm-6 col-md-3 mb-4">
+      <i class="bi bi-clock-fill text-primary fs-1 mb-2"></i>
+      <h5 class="fw-bold">On-Time Delivery</h5>
+      <p class="text-muted">We respect deadlines and deliver your projects promptly.</p>
+    </div>
+  </div>
+</div>
 {% endblock %}

@@ -1,0 +1,91 @@
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="mb-4 fw-bold text-primary">What Our Clients Say</h2>
+        <p class="lead text-muted">Real feedback from satisfied clients across Kenya</p>
+    </div>
+
+    <div class="position-relative">
+        <div id="testimonialScroller" class="d-flex overflow-hidden" style="scroll-snap-type: x mandatory; gap: 1rem;">
+            <div class="d-flex testimonial-track" style="transition: transform 0.6s ease; gap: 1rem;">
+                <!-- Each Testimonial Card -->
+                <div class="card shadow-sm p-3 flex-shrink-0" style="scroll-snap-align: start; width: 48%;">
+                    <div class="card-body">
+                        <p class="card-text fst-italic">“The logo Tosh Graphics created gave our online shop a whole new identity. Simple, unique, and memorable.”</p>
+                        <h6 class="card-subtitle mt-3 text-muted">— Mercy N., Meru Market Hub</h6>
+                    </div>
+                </div>
+                <div class="card shadow-sm p-3 flex-shrink-0" style="scroll-snap-align: start; width: 48%;">
+                    <div class="card-body">
+                        <p class="card-text fst-italic">“From posters to flyers, Tosh Graphics has been our go-to design team. They're reliable and super creative.”</p>
+                        <h6 class="card-subtitle mt-3 text-muted">— Alex M., A-List Events</h6>
+                    </div>
+                </div>
+                <div class="card shadow-sm p-3 flex-shrink-0" style="scroll-snap-align: start; width: 48%;">
+                    <div class="card-body">
+                        <p class="card-text fst-italic">“They revamped my CV and designed business cards that got me noticed in interviews. Totally worth it!”</p>
+                        <h6 class="card-subtitle mt-3 text-muted">— Kevin W., Software Developer</h6>
+                    </div>
+                </div>
+                <div class="card shadow-sm p-3 flex-shrink-0" style="scroll-snap-align: start; width: 48%;">
+                    <div class="card-body">
+                        <p class="card-text fst-italic">“I wanted a website for my salon and Tosh Graphics delivered more than I imagined. Clean, classy, and responsive.”</p>
+                        <h6 class="card-subtitle mt-3 text-muted">— Brenda K., Luxe Touch Beauty</h6>
+                    </div>
+                </div>
+                <div class="card shadow-sm p-3 flex-shrink-0" style="scroll-snap-align: start; width: 48%;">
+                    <div class="card-body">
+                        <p class="card-text fst-italic">“Tosh Graphics helped brand our youth mentorship program with posters and T-shirt designs. Huge impact!”</p>
+                        <h6 class="card-subtitle mt-3 text-muted">— Pastor John M., Youth Reach Kenya</h6>
+                    </div>
+                </div>
+                <div class="card shadow-sm p-3 flex-shrink-0" style="scroll-snap-align: start; width: 48%;">
+                    <div class="card-body">
+                        <p class="card-text fst-italic">“Their quick turnaround and professionalism made them an easy choice. Great for small businesses.”</p>
+                        <h6 class="card-subtitle mt-3 text-muted">— Ruth N., Cake n' Crumbs Bakery</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Buttons -->
+        <div class="d-flex justify-content-center mt-4 gap-3">
+            <button class="btn btn-outline-primary btn-sm testimonial-prev">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="btn btn-outline-primary btn-sm testimonial-next">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const track = document.querySelector('.testimonial-track');
+        const cardWidth = track.children[0].offsetWidth + 16; // width + gap
+        const visibleCards = 2;
+        const totalCards = track.children.length;
+        let index = 0;
+
+        function moveTo(index) {
+            const offset = -(cardWidth * index);
+            track.style.transform = `translateX(${offset}px)`;
+        }
+
+        function scrollNext() {
+            index = (index + 1) % totalCards;
+            moveTo(index);
+        }
+
+        function scrollPrev() {
+            index = (index - 1 + totalCards) % totalCards;
+            moveTo(index);
+        }
+
+        document.querySelector('.testimonial-next').addEventListener('click', scrollNext);
+        document.querySelector('.testimonial-prev').addEventListener('click', scrollPrev);
+
+        // Autoplay every 5 seconds
+        setInterval(scrollNext, 5000);
+    });
+</script>

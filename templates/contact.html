@@ -5,6 +5,16 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h2 class="text-center mb-4">Contact Us</h2>
+            
+            <!-- Added professional trust indicators -->
+            <div class="text-center mb-4">
+                <p class="text-muted mb-3">
+                    <i class="bi bi-shield-check fs-4 text-primary"></i> Your information is secure and confidential
+                </p>
+                <p class="small text-muted">
+                    We typically respond within 24 business hours
+                </p>
+            </div>
 
             {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -33,11 +43,40 @@
                     <textarea name="message" id="message" class="form-control" rows="4" placeholder="Write your message here..." required></textarea>
                 </div>
 
-                <div class="text-center">
+                <!-- Added professional form footer -->
+                <div class="mt-4 pt-3 border-top text-center">
                     <button type="submit" class="btn btn-primary px-4">Submit</button>
+                    <p class="small text-muted mt-3 mb-0">
+                        <i class="bi bi-envelope"></i> Prefer email? Contact us directly at: 
+                        <a href="mailto:contact@toshgraphics.com">toshgraphiics@gmail.com</a>
+                    </p>
                 </div>
             </form>
+            
+            <!-- Added professional alternative contact methods -->
+            <div class="mt-4 p-3 bg-light rounded text-center">
+                <h5 class="mb-3">Other Ways to Reach Us</h5>
+                <div class="d-flex justify-content-center gap-4">
+                    <div>
+                        <i class="bi bi-telephone fs-4 text-primary"></i>
+                        <p class="mb-0 small">+254792174478</p>
+                    </div>
+                    <div>
+                        <i class="bi bi-clock fs-4 text-primary"></i>
+                        <p class="mb-0 small">Mon-Fri: 8AM-9PM</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<!-- Added professional micro-interaction for form focus -->
+<style>
+    .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+        transition: all 0.3s ease;
+    }
+</style>
 {% endblock %}

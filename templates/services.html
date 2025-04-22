@@ -9,11 +9,12 @@
     </div>
   </div>
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 g-md-4">
-    <!-- Service Card 1 -->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <!-- Service Card 1 - Highlighted -->
     <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="{{ url_for('static', filename='images/logo-design.jpg') }}" class="card-img-top img-fluid" alt="Logo Design">
+      <div class="card h-100 shadow border border-primary position-relative service-card">
+        <span class="position-absolute top-0 start-0 badge bg-primary m-2">Popular</span>
+        <img src="{{ url_for('static', filename='images/logo-design.jpg') }}" class="card-img-top img-fluid" alt="Professional logo design mockup">
         <div class="card-body d-flex flex-column p-3 p-md-4">
           <h6 class="card-title mb-2 text-dark text-center">Logo Design</h6>
           <p class="card-text small text-muted text-center mb-3">Unique and professional brand identities tailored to your vision.</p>
@@ -26,8 +27,8 @@
 
     <!-- Service Card 2 -->
     <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="{{ url_for('static', filename='images/poster-flyer.jpg') }}" class="card-img-top img-fluid" alt="Poster Design">
+      <div class="card h-100 shadow service-card">
+        <img src="{{ url_for('static', filename='images/poster-flyer.jpg') }}" class="card-img-top img-fluid" alt="Colorful event poster design">
         <div class="card-body d-flex flex-column p-3 p-md-4">
           <h6 class="card-title mb-2 text-dark text-center">Poster & Flyer Design</h6>
           <p class="card-text small text-muted text-center mb-3">Visually appealing marketing materials for events and promotions.</p>
@@ -40,8 +41,8 @@
 
     <!-- Service Card 3 -->
     <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="{{ url_for('static', filename='images/business-card.jpg') }}" class="card-img-top img-fluid" alt="Business Card Design">
+      <div class="card h-100 shadow service-card">
+        <img src="{{ url_for('static', filename='images/business-card.jpg') }}" class="card-img-top img-fluid" alt="Elegant business card layout">
         <div class="card-body d-flex flex-column p-3 p-md-4">
           <h6 class="card-title mb-2 text-dark text-center">Business Cards</h6>
           <p class="card-text small text-muted text-center mb-3">Stylish and professional designs to help you network with confidence.</p>
@@ -54,8 +55,8 @@
 
     <!-- Service Card 4 -->
     <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="{{ url_for('static', filename='images/web-design.jpg') }}" class="card-img-top img-fluid" alt="Web Design">
+      <div class="card h-100 shadow service-card">
+        <img src="{{ url_for('static', filename='images/web-design.jpg') }}" class="card-img-top img-fluid" alt="Responsive website design preview">
         <div class="card-body d-flex flex-column p-3 p-md-4">
           <h6 class="card-title mb-2 text-dark text-center">Web Design</h6>
           <p class="card-text small text-muted text-center mb-3">Modern, responsive, and user-friendly websites built to convert.</p>
@@ -68,8 +69,8 @@
 
     <!-- Service Card 5 -->
     <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="{{ url_for('static', filename='images/social-media.jpg') }}" class="card-img-top img-fluid" alt="Social Media Graphics">
+      <div class="card h-100 shadow service-card">
+        <img src="{{ url_for('static', filename='images/social-media.jpg') }}" class="card-img-top img-fluid" alt="Social media graphics for engagement">
         <div class="card-body d-flex flex-column p-3 p-md-4">
           <h6 class="card-title mb-2 text-dark text-center">Social Media Graphics</h6>
           <p class="card-text small text-muted text-center mb-3">Eye-catching designs that boost your engagement and reach online.</p>
@@ -82,8 +83,8 @@
 
     <!-- Service Card 6 -->
     <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="{{ url_for('static', filename='images/packaging.jpg') }}" class="card-img-top img-fluid" alt="Brand Identity">
+      <div class="card h-100 shadow service-card">
+        <img src="{{ url_for('static', filename='images/packaging.jpg') }}" class="card-img-top img-fluid" alt="Branded packaging mockup">
         <div class="card-body d-flex flex-column p-3 p-md-4">
           <h6 class="card-title mb-2 text-dark text-center">Brand Identity & Packaging</h6>
           <p class="card-text small text-muted text-center mb-3">Consistent branding solutions across all your materials and packaging.</p>
@@ -94,5 +95,23 @@
       </div>
     </div>
   </div>
+
+  <!-- CTA Section -->
+  <div class="text-center mt-5">
+    <h5 class="mb-3 text-secondary">Not sure where to start?</h5>
+    <a href="/contact" class="btn btn-outline-primary btn-lg">Talk to a Design Expert</a>
+  </div>
 </div>
+
+<!-- Hover Effect Styling -->
+<style>
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
+  }
+</style>
 {% endblock %}

@@ -3,43 +3,27 @@
 {% block title %}Home | Tosh Graphics{% endblock %}
 
 {% block content %}
-<!-- Wrapper to ensure no extra space on mobile and proper layout -->
-<div class="d-flex flex-column min-vh-100">
 
-    <!-- Hero Section -->
-    <div class="bg-light px-3 py-4 py-md-5 text-center shadow-sm">
-        <div class="container">
-            <h1 class="display-4 display-md-3">Tosh Graphics</h1>
-            <p class="lead mb-3 mb-md-4">"Bringing Creativity to Life"</p>
-            <p class="mb-3 mb-md-4">
-                From logos to websites, we help bring your brand's vision to life with stunning visuals and creative designs.
-            </p>
-            <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg px-4 py-2 mb-2 mb-md-0">
-                Discover What We Can Do for You
-            </a>
-        </div>
+<!-- Full-width background section -->
+<!-- Hero Section Only - Full width background with contained content -->
+<div class="container-fluid g-0" style="background-color: #f8f9fa;">
+    <div class="container py-5">
+      <div class="text-center">
+        <h1 class="display-4 fw-bold text-primary">Welcome to Tosh Graphics</h1>
+        <p class="lead mb-3">Your Creative Design Partner  Bringing Creativity to Life</p>
+        <p class="mb-4">
+          We specialize in high‑quality graphic design services: logos, flyers, business cards, 
+          web design crafted to give your brand a bold, professional presence.
+        </p>
+        <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg px-4 py-2">
+          Discover What We Can Do for You
+        </a>
+      </div>
     </div>
-
-    <!-- Welcome and Mission Section -->
-    <div class="container my-3 my-md-4">
-        <div class="text-center px-2 px-md-0">
-            <h2 class="mb-3">Welcome to Tosh Graphics</h2>
-            <p class="mx-auto mb-4" style="max-width: 800px;">
-                We specialize in high-quality graphic design services, turning ideas into visually stunning designs.
-                From logos and flyers to business cards and web design, we create eye-catching, professional,
-                and brand-focused visuals that leave a lasting impression.
-            </p>
-
-            <h3 class="mt-4 mt-md-4 mb-3">Our Mission</h3>
-            <p class="fst-italic mx-auto mb-0" style="max-width: 700px;">
-                Our mission at Tosh Graphics is to empower businesses, brands, and individuals with powerful
-                visual storytelling through innovative and custom graphic design solutions.
-            </p>
-        </div>
-    </div>
+  </div>
 
     <!-- Services Snapshot Section -->
-    <div class="bg-white py-4 py-md-5 border-top">
+    <div class="bg-white py-5 border-top">
         <div class="container text-center">
             <h3 class="mb-4">What We Offer</h3>
             <div class="row">
@@ -56,8 +40,7 @@
                     <p>Flyers, posters, and business cards tailored for maximum impact.</p>
                 </div>
             </div>
-            
-            <!-- Call to Action Button -->
+
             <div class="mt-4">
                 <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-lg px-4">
                     Explore All Our Services
@@ -65,10 +48,9 @@
             </div>
         </div>
     </div>
-    
 
     <!-- Why Choose Us Section -->
-    <div class="bg-light py-4 py-md-5">
+    <div class="bg-light py-5">
         <div class="container text-center">
             <h3 class="mb-4">Why Choose Tosh Graphics?</h3>
             <p class="mx-auto mb-4" style="max-width: 750px;">
@@ -91,10 +73,8 @@
         </div>
     </div>
 
- 
     <!-- Testimonials Preview Section -->
-{% include 'testimonial.html' %}
-
+    {% include 'testimonial.html' %}
 
 </div>
 {% endblock %}
